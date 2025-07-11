@@ -1,5 +1,4 @@
 ultralytics
 pillow
 numpy
-tempfile
 streamlit
