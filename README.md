@@ -9,7 +9,7 @@ This project leverages **YOLOv8** and a **Streamlit web app** to detect **safety
 
 - 🧠 **YOLOv8-based Object Detection**
 - 🖼 **Streamlit GUI** for easy interaction
-- 🔍 **Detection of 3 classes**: `helmet`, `jacket`
+- 🔍 **Detection of 2 classes**: `helmet`, `jacket`
 - 📸 **Upload images** and visualize detections instantly
 
 ---
@@ -19,7 +19,7 @@ This project leverages **YOLOv8** and a **Streamlit web app** to detect **safety
 ```
 project-root/
 ├── app.py                  # Streamlit web app
-├── best.pt
+├── best.pt                 # Trained model
 └── data.yaml               # Dataset configuration
 
 ```
@@ -31,8 +31,8 @@ project-root/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/helmet-jacket-detection
-cd helmet-jacket-detection
+git clone https://github.com/Anonymous6730/safety-helmet-reflectivejacket-intelai4mfg
+cd safety-helmet-reflectivejacket-intelai4mfg
 ```
 
 ### 2. Create Virtual Environment (Recommended)
@@ -67,7 +67,7 @@ Sample `data.yaml`:
 train: ../train/images
 val: ../valid/images
 
-nc: 3
+nc: 2
 names: ['helmet', 'jacket']
 ```
 
