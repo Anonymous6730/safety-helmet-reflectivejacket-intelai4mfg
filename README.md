@@ -1,13 +1,13 @@
 
-# 🦺 Helmet & Reflective Jacket Detection with YOLOv8
+# 🦺 Helmet & Reflective Jacket Detection with YOLOv11
 
-This project leverages **YOLOv8** and a **Streamlit web app** to detect **safety helmets** and **reflective jackets** in uploaded images. Designed for improving safety compliance in industrial and construction environments, this system enables real-time or batch detection of personal protective equipment (PPE).
+This project leverages **YOLOv11** and a **Streamlit web app** to detect **safety helmets** and **reflective jackets** in uploaded images. Designed for improving safety compliance in industrial and construction environments, this system enables real-time or batch detection of personal protective equipment (PPE).
 
 ---
 
 ## 🚧 Project Features
 
-- 🧠 **YOLOv8-based Object Detection**
+- 🧠 **YOLOv11-based Object Detection**
 - 🖼 **Streamlit GUI** for easy interaction
 - 🔍 **Detection of 2 classes**: `helmet`, `jacket`
 - 📸 **Upload images** and visualize detections instantly
