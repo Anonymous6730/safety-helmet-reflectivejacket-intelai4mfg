@@ -19,7 +19,6 @@ This project leverages **YOLOv11** and a **Streamlit web app** to detect **safet
 ```
 project-root/
 ├── app.py                  # Streamlit web app
-├── best.pt                 # Trained model
 └── data.yaml               # Dataset configuration
 
 ```
