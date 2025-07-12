@@ -12,7 +12,7 @@ st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered
 # === Load YOLOv8 Model ===
 @st.cache_resource
 def load_model():
-    return YOLO("C:/Users/khatr/Projects/Intel_Internship/safety-Helmet-Reflective-Jacket/runs/detect/ppe_detection/weights/best.pt")
+    return YOLO("./best.pt")
 
 model = load_model()
 
