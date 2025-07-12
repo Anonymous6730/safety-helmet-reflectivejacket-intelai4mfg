@@ -12,7 +12,14 @@ st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered
 # === Load YOLOv8 Model ===
 @st.cache_resource
 def load_model():
-    return YOLO("./best.pt")
+    output_name = 'best.pt'
+    
+    # Construct the download URL
+    url = "https://drive.google.com/uc?export=download&id=1yXUPCbZfzXf3q-uTUtfStq0dkcVHI9Qz"
+    
+    # Download the model
+    gdown.download(url, output_name, quiet=False)
+    return YOLO(output_name)
 
 model = load_model()
 
