@@ -27,7 +27,7 @@ model = load_model()
 with st.sidebar:
     st.title("ℹ️ About")
     st.markdown("""
-This app uses a YOLOv8 model to detect:
+This app uses a YOLOv11 model to detect:
 - 🪖 Safety Helmets  
 - 🦺 Reflective Jackets
 
@@ -128,11 +128,11 @@ st.divider()
 
 st.markdown("## 🧠 How This App Works (Technically)")
 st.markdown("""
-This application uses a **YOLOv8 (You Only Look Once)** object detection model trained on images of construction workers.
+This application uses a **YOLOv11 (You Only Look Once)** object detection model trained on images of construction workers.
 
 - 🖼️ It processes your uploaded image  
-- 🧠 Passes it through the YOLOv8 neural network  
-- 📦 Detects objects (PPE) and draws bounding boxes  
+- 🧠 Passes it through the YOLOv11 neural network  
+- 📦 Detects objects (PPE) and raws bounding boxes  
 - 📊 Outputs the class name and confidence level
 """)
 
