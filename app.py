@@ -119,13 +119,6 @@ if uploaded_file:
     col1, col2 = st.columns([1, 1])
     with col1:
         st.download_button("📥 Download Image", data=byte_im, file_name="ppe_result.jpg", mime="image/jpeg")
-    with col2:
-        try:
-            if st.button("🔁 Try Another Image"):
-                st.rerun()
-        except AttributeError:
-            st.info("🔄 Please manually refresh the page to try another image.")
-
 else:
     st.info("👆 Upload an image above to begin PPE detection.")
     st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_container_width=False)
