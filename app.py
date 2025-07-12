@@ -121,7 +121,7 @@ if uploaded_file:
 
 else:
     st.info("👆 Upload an image above to begin PPE detection.")
-    st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_column_width=False)
+    st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_container_width=False)
 
 # === Footer Divider ===
 st.divider()
