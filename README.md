@@ -80,7 +80,7 @@ Dataset is publicly available on Kaggle and licensed accordingly.
 
 ## 🙌 Acknowledgements
 
-- [Ultralytics YOLOv8](https://github.com/ultralytics/ultralytics)
+- [Ultralytics YOLOv11](https://github.com/ultralytics/ultralytics)
 - [Kaggle Safety Helmet & Reflective Jacket Dataset](https://www.kaggle.com/datasets/niravnaik/safety-helmet-and-reflective-jacket)
 - [Streamlit](https://streamlit.io/)
 
