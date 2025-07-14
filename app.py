@@ -5,6 +5,7 @@ import tempfile
 from ultralytics import YOLO
 import time
 from io import BytesIO
+import gdown
 
 # === Page Config ===
 st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered")
