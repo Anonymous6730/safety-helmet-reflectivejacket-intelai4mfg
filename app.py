@@ -126,4 +126,4 @@ This application uses a **YOLOv11 (You Only Look Once)** object detection model 
 """)
 
 st.divider()
-st.markdown("<p style='text-align: center; font-size: 13px;'>Made with 🧠 and ☕ using Streamlit & YOLOv8</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 13px;'>Made with 🧠 and ☕ using Streamlit & YOLOv11</p>", unsafe_allow_html=True)
