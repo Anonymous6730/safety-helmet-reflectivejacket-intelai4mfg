@@ -2,7 +2,6 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 import tempfile
-import cv2
 from ultralytics import YOLO
 import time
 from io import BytesIO
