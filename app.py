@@ -115,7 +115,7 @@ else:
 
 st.divider()
 
-st.markdown("## 🧠 How This App Works (Technically)")
+st.markdown("## 🧠 How This App Works")
 st.markdown("""
 This application uses a **YOLOv11 (You Only Look Once)** object detection model trained on images of construction workers.
 
