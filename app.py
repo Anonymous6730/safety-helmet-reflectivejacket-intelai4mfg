@@ -63,56 +63,8 @@ st.markdown("""
 
 st.divider()
 
-st.markdown("### 🖼️ Step 1: Choose Input Method")
-
-tab1, tab2 = st.tabs(["📤 Upload Image", "📷 Live Camera"])
-
-with tab1:
-    uploaded_file = st.file_uploader("Upload an Image", type=["jpg", "jpeg", "png"])
-
-with tab2:
-    st.markdown("### 🎥 Live PPE Detection via Webcam")
-
-    if "camera_running" not in st.session_state:
-        st.session_state["camera_running"] = False
-
-    if not st.session_state["camera_running"]:
-        if st.button("▶️ Start Camera"):
-            st.session_state["camera_running"] = True
-            st.rerun()
-
-    if st.session_state["camera_running"]:
-        cap = cv2.VideoCapture(0)
-        stframe = st.empty()
-
-        while True:
-            ret, frame = cap.read()
-            if not ret:
-                st.error("❌ Failed to access webcam.")
-                st.session_state["camera_running"] = False
-                break
-
-            rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-
-            with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
-                temp_path = tmp.name
-
-            Image.fromarray(rgb_frame).save(temp_path)
-            results = model.predict(source=temp_path, conf=0.25, save=False)
-            result_img = results[0].plot()
-
-            stframe.image(result_img, channels="RGB", use_container_width=True)
-
-            try:
-                if st.button("⛔ Stop Camera"):
-                    st.session_state["camera_running"] = False
-                    cap.release()
-                    st.rerun()
-                    break
-            except st.errors.StreamlitDuplicateElementId:
-                pass
-
-            time.sleep(0.05)
+st.markdown("### 🖼️ Step 1: Upload Your Image")
+uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"], label_visibility="collapsed")
 
 if uploaded_file:
     st.markdown("### 🔄 Step 2: Processing Image...")
@@ -159,7 +111,6 @@ if uploaded_file:
         st.download_button("📥 Download Image", data=byte_im, file_name="ppe_result.jpg", mime="image/jpeg")
 else:
     st.info("👆 Upload an image above to begin PPE detection.")
-
     st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_container_width=False)
 
 st.divider()
