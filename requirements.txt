@@ -3,3 +3,4 @@ pillow
 numpy
 streamlit
 gdown
+opencv-python-headless
