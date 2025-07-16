@@ -20,6 +20,7 @@ This project leverages **YOLOv11** and a **Streamlit web app** to detect **safet
 project-root/
 ├── app.py                  # Streamlit web app
 ├── model_training.ipynb    # Model Training Notebook
+├── YOLOv11m.pt             # Trained model
 └── data.yaml               # Dataset configuration
 
 ```
