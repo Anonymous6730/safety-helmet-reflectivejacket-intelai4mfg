@@ -6,7 +6,6 @@ import cv2
 from ultralytics import YOLO
 import time
 from io import BytesIO
-import gdown
 
 st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered")
 
