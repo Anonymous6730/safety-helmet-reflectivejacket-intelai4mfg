@@ -11,7 +11,7 @@ st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered
 
 @st.cache_resource
 def load_model():
-    return YOLO('YOLOv11m.pt')
+    return YOLO('best.pt')
 
 model = load_model()
 
