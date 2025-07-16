@@ -3,4 +3,3 @@ ultralytics
 pillow
 numpy
 streamlit
-gdown
