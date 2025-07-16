@@ -12,12 +12,7 @@ st.set_page_config(page_title="PPE Detector", page_icon="🦺", layout="centered
 
 @st.cache_resource
 def load_model():
-    output_name = 'best.pt'
-    
-    url = "https://drive.google.com/uc?export=download&id=1yXUPCbZfzXf3q-uTUtfStq0dkcVHI9Qz"
-    
-    gdown.download(url, output_name, quiet=False)
-    return YOLO(output_name)
+    return YOLO('best.pt')
 
 model = load_model()
 
