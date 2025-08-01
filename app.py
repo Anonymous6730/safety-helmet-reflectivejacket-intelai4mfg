@@ -37,16 +37,6 @@ For best results:
 st.markdown("<h1 style='text-align: center;'>🦺 PPE Detection App</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Detect Safety Helmets and Reflective Jackets in images using AI.</p>", unsafe_allow_html=True)
 
-st.markdown("## 📋 What is PPE and Why Is It Important?")
-st.markdown("""
-Personal Protective Equipment (PPE) includes items like helmets and reflective jackets that protect workers from injuries in hazardous environments like construction or industrial sites.
-
-Using PPE is crucial for:
-- ✅ Preventing head injuries and visibility-related accidents  
-- ✅ Ensuring compliance with safety regulations  
-- ✅ Saving lives and reducing workplace risk
-""")
-
 st.markdown("### ✅ Follow These Steps:")
 st.markdown("""
 1. 📤 Upload a JPG/PNG image of people working on-site.  
