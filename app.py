@@ -98,4 +98,4 @@ else:
     st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_container_width=False)
 
 st.divider()
-st.markdown("<p style='text-align: center; font-size: 13px;'>Made with 🧠 and ☕ using Streamlit & YOLOv11</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center; font-size: 13px;'>Made with 🧠 using Streamlit & YOLOv11</p>", unsafe_allow_html=True)
