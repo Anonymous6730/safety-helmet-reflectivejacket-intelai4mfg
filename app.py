@@ -47,7 +47,7 @@ st.markdown("""
 
 st.divider()
 
-st.markdown("### 🖼Step 1: Upload Your Image")
+st.markdown("### Step 1: Upload Your Image")
 uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"], label_visibility="collapsed")
 
 if uploaded_file:
