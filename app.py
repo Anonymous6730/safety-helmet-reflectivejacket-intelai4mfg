@@ -19,8 +19,8 @@ with st.sidebar:
     st.title("ℹ️ About")
     st.markdown("""
 This app uses a YOLOv11 model to detect:
-- 🪖 Safety Helmets  
-- 🦺 Reflective Jackets
+- Safety Helmets  
+- Reflective Jackets
 
 ---
 
