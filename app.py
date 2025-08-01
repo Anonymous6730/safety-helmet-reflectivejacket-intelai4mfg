@@ -37,21 +37,21 @@ For best results:
 st.markdown("<h1 style='text-align: center;'>🦺 PPE Detection App</h1>", unsafe_allow_html=True)
 st.markdown("<p style='text-align: center;'>Detect Safety Helmets and Reflective Jackets in images using AI.</p>", unsafe_allow_html=True)
 
-st.markdown("### ✅ Follow These Steps:")
+st.markdown("### Follow These Steps:")
 st.markdown("""
-1. 📤 Upload a JPG/PNG image of people working on-site.  
-2. 🤖 The model will automatically detect and highlight PPE items.  
-3. 📊 Results and confidence levels will be shown.  
-4. 💾 You can download the image with detections or try again!
+1. Upload a JPG/PNG image of people working on-site.  
+2. The model will automatically detect and highlight PPE items.  
+3. Results and confidence levels will be shown.  
+4. You can download the image with detections or try again!
 """)
 
 st.divider()
 
-st.markdown("### 🖼️ Step 1: Upload Your Image")
+st.markdown("### 🖼Step 1: Upload Your Image")
 uploaded_file = st.file_uploader("", type=["jpg", "jpeg", "png"], label_visibility="collapsed")
 
 if uploaded_file:
-    st.markdown("### 🔄 Step 2: Processing Image...")
+    st.markdown("### Step 2: Processing Image...")
     image = Image.open(uploaded_file).convert("RGB")
     st.image(image, caption="Uploaded Image", use_container_width=True)
 
@@ -68,10 +68,10 @@ if uploaded_file:
 
     results = model.predict(source=temp_image_path, conf=0.25, save=False)
     result_img = results[0].plot()
-    status_text.text("✅ Detection Complete!")
+    status_text.text("Detection Complete!")
     progress_bar.empty()
 
-    st.markdown("### 📊 Step 3: Detection Results")
+    st.markdown("### Step 3: Detection Results")
     st.image(result_img, caption="Detected PPE Items", use_container_width=True)
 
     boxes = results[0].boxes
@@ -86,28 +86,16 @@ if uploaded_file:
     else:
         st.warning("⚠️ No PPE items detected. Try another image.")
 
-    st.markdown("### 💾 Step 4: Download or Try Another")
+    st.markdown("### Step 4: Download or Try Another")
     buf = BytesIO()
     Image.fromarray(result_img).save(buf, format="JPEG")
     byte_im = buf.getvalue()
     col1, col2 = st.columns([1, 1])
     with col1:
-        st.download_button("📥 Download Image", data=byte_im, file_name="ppe_result.jpg", mime="image/jpeg")
+        st.download_button("Download Image", data=byte_im, file_name="ppe_result.jpg", mime="image/jpeg")
 else:
-    st.info("👆 Upload an image above to begin PPE detection.")
+    st.info("Upload an image above to begin PPE detection.")
     st.image("https://cdn-icons-png.flaticon.com/512/4715/4715620.png", width=120, caption="Awaiting image upload", use_container_width=False)
-
-st.divider()
-
-st.markdown("## 🧠 How This App Works")
-st.markdown("""
-This application uses a **YOLOv11 (You Only Look Once)** object detection model trained on images of construction workers.
-
-- 🖼️ It processes your uploaded image  
-- 🧠 Passes it through the YOLOv11 neural network  
-- 📦 Detects objects (PPE) and raws bounding boxes  
-- 📊 Outputs the class name and confidence level
-""")
 
 st.divider()
 st.markdown("<p style='text-align: center; font-size: 13px;'>Made with 🧠 and ☕ using Streamlit & YOLOv11</p>", unsafe_allow_html=True)
